@@ -10,11 +10,14 @@ import org.osmdroid.views.MapView;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.views.overlay.Marker;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.location.LocationListener;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
 import android.content.Context;
+import android.support.v7.widget.ButtonBarLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +40,17 @@ public class MainActivity extends AppCompatActivity {
         GeoPoint center = new GeoPoint(41.2807,1.9646);
         mc.animateTo(center);
         addMarker(center);
+
+        //button
+        Button btnExit = (Button) findViewById(R.id.btnExit);
+        btnExit.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                finish();
+                System.exit(0);
+            }
+        });
 
     }
 
