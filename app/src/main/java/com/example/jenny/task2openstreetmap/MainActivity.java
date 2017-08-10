@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         Marker marker = new Marker(myMap);
         marker.setPosition(center);
         marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-        //marker.setIcon(getResources().getDrawable(R.drawable.ic_launcher));
 
         myMap.getOverlays().clear();
         myMap.getOverlays().add(marker);
